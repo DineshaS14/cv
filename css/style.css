@@ -1,44 +1,68 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+   
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-direction: column;
     
-    background-image: url('../images/treeBark.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-image:  url('../images/treeBark.jpg'),  url('../images/leavesOne.jpg');;
+    background-blend-mode: lighten;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     cursor: url('../images/ladyBug.png')16 16, auto; /* Custom cursor image */
  
 }
+/* this is for all the texts within sections */
 section {
-    color: green; /* Green text color */
-    text-shadow: 1px 1px 2px yellow; /* Yellow shadow effect on text */
-    font: 25px;
+   
+   
+    background-color: #060604;
+    color: #00f64ab4;
+    font-weight: bold;
+    font-style: normal;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 20px; /* Adds 20px padding around the content */
+    text-shadow: 1px 1px 2px rgb(240, 7, 7); /* Red shadow effect on text */
 }
+.relevant-Course {
+    margin-left: 0;
+}
+
+
 /* styling for navigation bar */
-nav {
+body nav {
     background-color: #40000a; /* Dark background color for differentiation */
     color: green; /* Green text color */
     text-shadow: 1px 1px 2px yellow; /* Yellow shadow effect on text */
     padding: 0px 20px; /* Adds padding for spacing */
     display: flex; /* Makes the nav a flex parent */
     justify-content: space-between; /* Separates items to opposite ends */
+    width: 100%;
     align-items: center; /* Vertically centers the items */
 }
 
-nav p {
+body nav p {
     margin: 0; /* Removes default margins */
 }
 
-nav a {
+body nav a {
     
     text-decoration: none; /* Removes underline from the link */
     font-weight: bold; /* Makes the link text bold */
 }
 
-nav a:hover {
+body nav a:hover {
     text-decoration: underline; /* Adds underline when hovering over the link */
 }
 
@@ -52,7 +76,6 @@ nav a:hover {
     width: 100%; /* Ensures the section takes the full width of the body */
     min-height: 100vh; /* Ensures the section covers at least the full height of the viewport */
     padding: 50px 0; /* Adds vertical padding for spacing */
-    color: white; /* Text color for contrast */
     display: flex; /* Flexbox to center content */
     flex-direction: column; /* Align content in a column */
     justify-content: center; /* Centers content vertically */
@@ -69,9 +92,14 @@ nav a:hover {
 
 .name-image h1 {
     margin: 0;
-    font-size: 100px; /* Adjusts the font size of the name */
-    color: #40000a ; /* Sets the text color to brown */
-    text-shadow: 2px 2px 4px #e7eae7; /* Adds a yellow shadow effect */
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: 
+        "MORF" 15, /* Morphology axis */
+        "SHLN" 50; /* Sholling axis (example) */
+    font-size: 150px;
 }
 
 .name-image img {
@@ -91,7 +119,7 @@ nav a:hover {
 }
 
 /* profile section end */
-h2 {
+section h2 {
     
     background-image: url('../images/leafh2.jpeg');
     background-size: cover; /* Ensures the background image covers the entire h2 element */
@@ -99,13 +127,48 @@ h2 {
     background-repeat: no-repeat; /* Prevents the background image from repeating */
    
     padding: 20px; /* Adds padding around the text to ensure space between the text and the edges of the background */
-    margin: 20px 2px; /* Centers the h2 element horizontally with some vertical space */
+    margin: 5px 2px; /* Centers the h2 element horizontally with some vertical space */
     
     color: #060604; /* Sets the text color to white for contrast */
     text-shadow: 2px 2px 4px rgba(222, 226, 6, 0.6); /* Adds a shadow effect to make the text stand out against the background */
     border-radius: 20px; /* Optional: rounds the corners of the h2 element */
     display: inline-block;
 }
+/* Container for both text and image */
+.education-container {
+    display: flex;
+    flex-direction: row; /* Places text and image side by side */
+    justify-content: space-between; /* Adds space between the text and the image */
+    align-items: center; /* Vertically centers the content */
+    padding: 20px; /* Adds some padding around the content */
+}
+
+/* Text styling for the left side */
+.education-text {
+    flex: 1; /* Takes up available space */
+    margin-right: 20px; /* Adds space between the text and the image */
+}
+
+/* Image styling for the right side */
+.univ-img img {
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6); /* Adds red shadow around the image */
+    border: 5px solid rgba(255, 0, 0, 0.8); /* Optional: Adds a red border around the image */
+    width: 200px; /* Sets image width */
+    height: 200px; /* Sets image height */
+    object-fit: cover; /* Ensures image fits inside the rounded shape */
+}
+
+.univ-img img {
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6); /* Adds red shadow around the image */
+    border: 5px solid rgba(255, 0, 0, 0.8); /* Optional: Adds a red border around the image */
+    width: 200px; /* Ensures the image is 200px wide */
+    height: 200px; /* Ensures the image is 200px tall */
+    object-fit: cover; /* Ensures the image is fully contained and properly fits inside the rounded shape */
+    margin: 20px auto; /* Centers the image horizontally and adds space around it */
+}
+
 hr {
     height: 10px; 
     border: none;
@@ -113,13 +176,66 @@ hr {
     
     
 }
-.hon-awards {
-    margin-left: 50%;
+/* Styles for the project section */
+
+
+/* Grid layout for three-column layout */
+.three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Adds space between cards */
+    margin: 20px 0;
 }
+
+/* Styling for each card */
+.card {
+    background-color: #f0f0f0; /* Light background color for card */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Style for project images */
+.project-image {
+    width: 100%; /* Image takes full width of the card */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 5px; /* Optional: rounds the image corners */
+}
+
+/* Styling for project headings inside cards */
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Styling for the project details */
+.card ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0); /* Red shadow effect on text */
+
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .three-col {
+        grid-template-columns: 1fr; /* Switches to one column on smaller screens */
+    }
+}
+
 
 /* footer styling */
 footer {
+    font-size: medium;
     background-color: #40000a; /* Dark red background color */
+    width: 100%;
     color: green; /* Green text color */
     text-shadow: 1px 1px 2px yellow; /* Yellow shadow effect on text */
     display: flex; /* Makes the footer a flex container */
