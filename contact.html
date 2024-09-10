@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Contact Dinesha Shair</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Dinesha Shair</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav>
-		<p>Dinesha Shair</p>
-		<p><a href="index.html">About me</a></p>
-	</nav>
-	
-	<section>
-		<h1>Contact: Dinesha Shair</h1>
-		<p>Atlanta, Georgia, +14046606544, shairdinesha9@gmail.com</p>
-	</section>
-	
-	<hr>
-	
-	<form action="mailto:shairdinesha9@gmail.com" method="post">
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name"><br><br>
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email"><br><br>
-		<label for="message">Message:</label>
-		<textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-		<input type="submit" value="Submit">
-	</form>
-	
-	<footer>
+    <nav>
+        <p>Dinesha Shair</p>
+        <p><a href="index.html">About me</a></p>
+    </nav>
+
+    <section class="one-col">
+        <h1>Contact: Dinesha Shair</h1>
+        <p>Atlanta, Georgia, +14046606544, shairdinesha9@gmail.com</p>
+
+        <hr>
+
+        <!-- Contact Form -->
+        <form action="mailto:shairdinesha9@gmail.com" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
         &copy; Dinesha Shair <a href="index.html">Back to Index</a>
-        <a href="https://www.linkedin.com/in/dineshas14/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/dineshas14/"><i class="fa fa-linkedin"></i></a>
         <a href="https://github.com/DineshaS14/"><i class="fa fa-github"></i></a>
     </footer>
 </body>

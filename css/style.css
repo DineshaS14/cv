@@ -229,8 +229,59 @@ hr {
         grid-template-columns: 1fr; /* Switches to one column on smaller screens */
     }
 }
+/* contact me */
+/* Style for the one-column layout */
+.one-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%; /* Full width */
+    max-width: 600px; /* Restrict width to 600px for better readability */
+    padding: 20px;
+}
+/* Form styles */
+form {
+    width: 100%; /* Make the form take full width of the container */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between input fields */
+}
 
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
 
+/* Input and textarea styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+/* Submit button */
+input[type="submit"] {
+    background-color: #40000a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #600000;
+}
 /* footer styling */
 footer {
     font-size: medium;
@@ -242,4 +293,11 @@ footer {
     justify-content: center; /* Centers the child elements horizontally */
     align-items: center; /* Centers the child elements vertically */
    
+}
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .one-col {
+        padding: 15px;
+        width: 90%;
+    }
 }
